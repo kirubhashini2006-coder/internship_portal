@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salem Steel Plant - Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&display=swap');
+      
+      body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 16px; /* Increased from 14px */
+        background-color: #f8fafc;
+        color: black;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .heading-text {
+        font-size: 22px !important; /* Increased from 18px */
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .normal-text {
+        font-size: 16px !important; /* Increased from 14px */
+      }
+
+      /* Tailwind custom colors */
+      .bg-ssp-blue { background-color: #003366; }
+      .text-ssp-blue { color: #003366; }
+      .border-ssp-blue { border-color: #003366; }
+
+      input, select, textarea {
+        font-size: 16px !important; /* Increased from 14px */
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .hero-bg {
+        background-image: 
+          linear-gradient(rgba(0, 30, 60, 0.85), rgba(0, 0, 0, 0.9)), 
+          url('https://images.unsplash.com/photo-1565034946487-077786996e27?q=80&w=2560&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+      }
+
+      /* Add a subtle technical grid overlay for a professional data portal feel */
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(circle, #ffffff08 1px, transparent 1px);
+        background-size: 40px 40px;
+        pointer-events: none;
+      }
+      
+      @media print {
+        .no-print { display: none !important; }
+        body { background: white; padding: 0; font-size: 16px; }
+        .print-container { padding: 0; margin: 0; width: 100%; border: none !important; box-shadow: none !important; }
+        .hero-bg { background: none !important; }
+        .hero-bg::before { display: none; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
